@@ -35,8 +35,7 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
       try {
         const { prompt } = JSON.parse(body);
-        const codexCli = path.resolve(__dirname, '..', 'codex-cli', 'bin', 'codex.js');
-        const child = spawn('node', [codexCli, prompt]);
+        const child = spawn('node', ['../codex-cli/bin/codex.js', prompt]);
         let output = '';
         child.stdout.on('data', data => {
           output += data.toString();
