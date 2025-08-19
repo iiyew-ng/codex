@@ -619,6 +619,8 @@ If you want to add a new feature or change the behavior of an existing one, plea
 
 **New contributions that don't go through this process may be closed** if they aren't aligned with our current roadmap or conflict with other priorities/upcoming features.
 
+See [docs/TODO.md](docs/TODO.md) for a list of outstanding improvements and a place to add new ones.
+
 ### Development workflow
 
 - Create a _topic branch_ from `main` - e.g. `feat/interactive-prompt`.
