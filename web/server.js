@@ -19,8 +19,13 @@ function serveStatic(filePath, contentType, res) {
 
 const server = http.createServer((req, res) => {
   if (req.method === 'GET') {
-    const file = req.url === '/' ? 'index.html' : req.url.slice(1);
-    const filePath = path.join(publicDir, file);
+    const requested = req.url === '/' ? 'index.html' : path.normalize(req.url.slice(1));
+    const filePath = path.normalize(path.join(publicDir, requested));
+    if (!filePath.startsWith(publicDir + path.sep)) {
+      res.writeHead(403);
+      res.end('Forbidden');
+      return;
+    }
     const ext = path.extname(filePath);
     const contentType = ext === '.js' ? 'text/javascript' : ext === '.css' ? 'text/css' : 'text/html';
     serveStatic(filePath, contentType, res);
@@ -63,3 +68,5 @@ const port = process.env.PORT || 3000;
 server.listen(port, () => {
   console.log(`Codex Web UI running at http://localhost:${port}`);
 });
+
+module.exports = server;

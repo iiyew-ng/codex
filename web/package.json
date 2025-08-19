@@ -5,6 +5,6 @@
   "description": "Minimal web UI for Codex CLI",
   "scripts": {
     "start": "node server.js",
-    "test": "node -e \"console.log('no tests')\""
+    "test": "node --test"
   }
 }
