@@ -26,6 +26,11 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.error {
+  color: red;
+  margin-bottom: 0.5rem;
+}
+
 #form {
   display: flex;
   margin-top: 0.5rem;
@@ -34,6 +39,11 @@ body {
 #prompt {
   flex: 1;
   padding: 0.5rem;
+}
+
+#prompt:disabled {
+  background: #f0f0f0;
+  color: #666;
 }
 
 button {
