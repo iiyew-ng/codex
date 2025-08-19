@@ -30,6 +30,7 @@
     - [Can I run without ANY approvals?](#can-i-run-without-any-approvals)
     - [Fine-tuning in `config.toml`](#fine-tuning-in-configtoml)
   - [Example prompts](#example-prompts)
+- [Building from source](#building-from-source)
 - [Running with a prompt as input](#running-with-a-prompt-as-input)
 - [Using Open Source Models](#using-open-source-models)
   - [Platform sandboxing details](#platform-sandboxing-details)
@@ -279,6 +280,10 @@ Below are a few bite-size examples you can copy-paste. Replace the text in quote
 | 5   | `codex "Explain what this regex does: ^(?=.*[A-Z]).{8,}$"`                      | Outputs a step-by-step human explanation.                                  |
 | 6   | `codex "Carefully review this repo, and propose 3 high impact well-scoped PRs"` | Suggests impactful PRs in the current codebase.                            |
 | 7   | `codex "Look for vulnerabilities and create a security review report"`          | Finds and explains security bugs.                                          |
+
+## Building from source
+
+See [docs/build_and_run.md](docs/build_and_run.md).
 
 ## Running with a prompt as input
 
@@ -639,7 +644,7 @@ If you want to add a new feature or change the behavior of an existing one, plea
 1. One maintainer will be assigned as a primary reviewer.
 2. If your PR adds a new feature that was not previously discussed and approved, we may choose to close your PR (see [Contributing](#contributing)).
 3. We may ask for changes - please do not take this personally. We value the work, but we also value consistency and long-term maintainability.
-5. When there is consensus that the PR meets the bar, a maintainer will squash-and-merge.
+4. When there is consensus that the PR meets the bar, a maintainer will squash-and-merge.
 
 ### Community values
 
