@@ -96,6 +96,16 @@ Each archive contains a single entry with the platform baked into the name (e.g.
 
 </details>
 
+### Experimental Web UI
+
+A minimal browser interface is available for local experimentation:
+
+```shell
+pnpm --filter codex-web start
+```
+
+Then open <http://localhost:3000> to chat with Codex in your browser.
+
 ### Using Codex with your ChatGPT plan
 
 <p align="center">

@@ -1,5 +1,6 @@
 packages:
   - docs
+  - web
 
 ignoredBuiltDependencies:
   - esbuild
